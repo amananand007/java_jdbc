@@ -37,13 +37,15 @@ public class App
            String query = "select * from students";
            ResultSet resultSet = statement.executeQuery(query);
 
-           while(resultSet.next()){
+           while(resultSet.next()) {
 
                int id = resultSet.getInt("id");
                String name = resultSet.getString("name");
                String course = resultSet.getString("course");
                System.out.println("Id: " + id  + "," + "name: " + name + "," +"course: " + course);
+
            }
+
            connection.close();
        }
 
